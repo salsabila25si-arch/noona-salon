@@ -59,6 +59,20 @@ public function store(Request $request)
             ->with('success', 'Reservasi berhasil dibuat!');
     }
 
+   public function cek(Request $request)
+{
+    $reservasi = null;
+
+    if ($request->filled('kode')) {
+        $kode = strtoupper(trim($request->query('kode')));
+        $reservasi = Reservasi::with(['layanan', 'stylist'])
+            ->where('kode', $kode)
+            ->first();
+    }
+
+    return view('reservasi.cek', compact('reservasi'));
+}
+
     public function show($kode)
     {
         $reservasi = Reservasi::with(['layanan', 'stylist'])

@@ -27,23 +27,33 @@
         </div>
 
         <div class="bg-white p-6 rounded-3xl shadow-lg border border-noona-blush">
-            <div class="aspect-[4/3] rounded-2xl bg-noona-blush/60 flex flex-col items-center justify-center text-center p-8">
-                <p class="font-serif text-3xl font-bold text-noona-dark">Noona Salon</p>
-                <p class="text-sm text-noona-muted mt-2 max-w-xs">
-                    "Because every woman deserves to feel confident, radiant, and effortlessly beautiful."
-                </p>
-                <div class="mt-6 grid grid-cols-3 gap-4 w-full pt-6 border-t border-noona-rose/20">
-                    <div>
-                        <p class="font-serif text-2xl font-bold text-noona-rose">{{ $layanans->count() }}+</p>
-                        <p class="text-xs text-noona-muted">Layanan</p>
-                    </div>
-                    <div>
-                        <p class="font-serif text-2xl font-bold text-noona-rose">{{ $stylists->count() }}</p>
-                        <p class="text-xs text-noona-muted">Pro Stylist</p>
-                    </div>
-                    <div>
-                        <p class="font-serif text-2xl font-bold text-noona-rose">100%</p>
-                        <p class="text-xs text-noona-muted">Produk Premium</p>
+            <div class="rounded-2xl bg-noona-blush/60 overflow-hidden flex flex-col items-center text-center">
+                <div class="relative w-full h-56 sm:h-64 overflow-hidden">
+                    <img
+                        src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1600&q=90"
+                        alt="Interior Noona Salon"
+                        class="w-full h-full object-cover object-center"
+                    >
+                    <div class="absolute inset-0 bg-noona-rose/15 mix-blend-multiply"></div>
+                </div>
+                <div class="p-8 w-full flex flex-col items-center">
+                    <p class="font-serif text-3xl font-bold text-noona-dark">Noona Salon</p>
+                    <p class="text-sm text-noona-muted mt-2 max-w-xs">
+                        "Because every woman deserves to feel confident, radiant, and effortlessly beautiful."
+                    </p>
+                    <div class="mt-6 grid grid-cols-3 gap-4 w-full pt-6 border-t border-noona-rose/20">
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-noona-rose">{{ $layanans->count() }}+</p>
+                            <p class="text-xs text-noona-muted">Layanan</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-noona-rose">{{ $stylists->count() }}</p>
+                            <p class="text-xs text-noona-muted">Pro Stylist</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-noona-rose">100%</p>
+                            <p class="text-xs text-noona-muted">Produk Premium</p>
+                        </div>
                     </div>
                 </div>
             </div>
